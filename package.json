@@ -6,13 +6,13 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
-    "express-static-gzip": "^0.3.2",
     "express": "^4.16.2",
+    "express-static-gzip": "^0.3.2",
     "fs": "^0.0.1-security",
     "http": "^0.0.0",
     "https": "^1.0.0",
     "path": "^0.12.7",
-    "requests": "^0.2.2"
+    "request": "^2.83.0"
   },
   "devDependencies": {},
   "scripts": {

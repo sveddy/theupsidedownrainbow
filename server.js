@@ -12,7 +12,6 @@ var path         = require('path'),
     request      = require('request'),
     gzip         = require('express-static-gzip');
 
-
 // Init Express
 var app = express();
 
