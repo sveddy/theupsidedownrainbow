@@ -1,0 +1,69 @@
+.menu-border
+    border-bottom: 1px solid #e8e8e8
+
+.menu, .menu-border
+    height: $navbar-height
+    top: 0px
+    line-height: 1
+    background: white
+    display: block
+    position: fixed
+    width: 100%
+    z-index: 9999
+
+    &__list
+        display: flex
+        position: relative
+        margin: 0px
+        padding: 6px 0px
+        list-style: none
+
+    &__item
+        display: block
+        margin: 0
+
+        &:first-of-type
+            margin-left: 10px
+
+    &__item--current
+        .menu__link
+            @include transition(color, .5s)
+            color: black
+
+    &__link
+        display: block
+        cursor: pointer
+        width: 71px
+        height: 3em
+        color: #636466
+        text-align: center
+        text-decoration: none
+        padding: 1em
+        font:
+            family: $avenir
+            size: 16
+            weight: 500
+
+        &:hover, &:focus
+            color: black
+
+    &__line
+        @include transition(transform(.5s))
+        @include position(absolute, 100% null null 0)
+        width: 120px
+        height: 2px
+        pointer-events: none
+        border: 1px solid white
+        border-width: 0 45px
+        background: black
+        transition-timing-function: cubic-bezier(1, 0.01, 0, 1.22)
+
+.selected
+    background: black
+    padding: 100px
+
+.menu__item:nth-child(1) .menu__item--current ~ .menu__line
+    @include transform(translate3d(0,0,0))
+
+.menu__item:nth-child(2) .menu__item--current ~ .menu__line
+    @include transform(translate3d(100%,0,0))

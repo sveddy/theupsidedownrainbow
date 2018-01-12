@@ -1,0 +1,223 @@
+body
+    margin: 0px
+
+*, *:after, *:before
+    box-sizing: border-box
+
+*,
+*:after,
+*:before
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+
+
+.clearfix:before,
+.clearfix:after
+    content: ''
+    display: table
+
+
+.clearfix:after
+    clear: both
+
+a
+    text-decoration: none
+    
+.container
+    max-width: 1000px
+    margin: auto
+
+.hero-unit
+    height: calc(100vh - 160px)
+    width: 100%
+    background:
+        color: #F3F4F7
+        image: url('../img/dog2.jpg')
+        size: cover
+        position: bottom
+        attachment: fixed
+
+    &__callout
+        @include animation(textInn 1.0s ease-in)
+        @include position(relative, 200px null null null)
+
+    &__header
+        position: relative
+        background: white
+        padding: 15px 18px
+        display: inline-block
+        width: auto
+
+    &__subheader
+        position: relative
+        background: white
+        padding: 10px 18px
+        display: block
+        margin-top: 15px
+        width: 389px
+        font-size: 22px
+
+    &__header-img
+        @include position(relative, 13px null null -4px)
+        height: 76px
+        display: inline-block
+        width: 129px
+        background:
+            image: url('../img/pawss.svg')
+            size: cover
+
+        .step
+            background: white
+            display: inline-block
+
+            &--1
+                @include animation(fadeInn 1.0s ease-in)
+                animation-fill-mode: forwards
+                height: 62px
+                opacity: 1
+                width: 35px
+                background: white
+
+            &--2
+                @include position(absolute, 41px null null null)
+                @include animation(fadeInn2 0.85s ease-in)
+                @include animation-delay(.6s)
+                animation-fill-mode: forwards
+                height: 33px
+                width: 34px
+                background: white
+
+            &--3
+                @include position(absolute, 5px null null 57px)
+                @include animation(fadeInn3 0.85s ease-in)
+                @include animation-delay(1.2s)
+                animation-fill-mode: forwards
+                height: 33px
+                width: 32px
+                background: white
+
+            &--4
+                @include position(absolute, 21px null null 92px)
+                @include animation(fadeInn4 0.85s ease-in)
+                @include animation-delay(1.8s)
+                animation-fill-mode: forwards
+                height: 30px
+                width: 30px
+                background: white
+
+            &--5
+                @include position(absolute, 0px null null 92px)
+                @include animation(fadeInn4 0.85s ease-in)
+                @include animation-delay(2.4s)
+                animation-fill-mode: forwards
+                height: 17px
+                width: 30px
+                background: white
+
+.content
+    position: relative
+    background: white
+    padding-top: 10px
+    padding: 42px 0px
+    display: flex
+    width: 100%
+    background:
+        size: 75px
+        color: white
+
+    &__item
+        @include animation(textInn2 1.0s ease-in)
+        flex: 1
+        display: inline-block
+        overflow: auto
+        padding-right: 53px
+
+        &:last-of-type
+            padding-right: 0px
+
+        .img
+            float: left
+            height: 76px
+            display: inline-block
+            width: 76px
+            background:
+                image: url('../img/money.svg')
+                size: cover
+
+        .img2
+            float: left
+            height: 76px
+            display: inline-block
+            width: 76px
+            background:
+                image: url('../img/heart.svg')
+                size: cover
+
+        span
+            @include position(relative, 22px null null null)
+            padding-left: 10px
+            color: #636466
+            font:
+                family: $avenirDemi
+                size: 26px
+                weight: 600
+
+.footer
+    background: #e8e8e8
+    height: 400px
+
+
+.social
+    @include position(relative, 7px null null null)
+    height: auto
+    width: auto
+    overflow: auto
+    float: right
+    margin-left: auto
+
+@keyframes fadeInn
+    from
+        opacity: 1
+    to
+        opacity: 0
+
+
+@keyframes fadeInn2
+    from
+        opacity: 1
+    to
+        opacity: 0
+
+@keyframes fadeInn3
+    from
+        opacity: 1
+    to
+        opacity: 0
+
+@keyframes fadeInn4
+    from
+        opacity: 1
+    to
+        opacity: 0
+
+@keyframes bg
+    from
+        opacity: 0
+    to
+        opacity: 1
+
+@keyframes textInn
+    from
+        opacity: 0
+        @include transform(translate3d(0,-5px,-100px))
+    to
+        opacity: 1
+        @include transform(translate3d(0, 0, 0))
+
+@keyframes textInn2
+    from
+        opacity: 0
+        @include transform(translate3d(0, 5px, 100px))
+    to
+        opacity: 1
+        @include transform(translate3d(0, 0, 0))

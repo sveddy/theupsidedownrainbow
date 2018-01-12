@@ -1,0 +1,35 @@
+.logo-icon
+    @include position(relative, 4px null null null)
+    height: 40px
+    width: 33px
+    display: inline-block
+    background:
+        image: url('../img/paw.svg')
+
+.facebook-icon
+    @include transition(all $ease-out-cubic 300ms)
+    position: relative
+    cursor: pointer
+    height: 29px
+    width: 29px
+    display: inline-block
+    background:
+        image: url('../img/footer-facebook-icon.svg')
+
+    &:hover
+        background:
+            image: url('../img/footer-facebook-icon--color.svg')
+
+.instagram-icon
+    @include transition(all $ease-out-cubic 300ms)
+    cursor: pointer
+    position: relative
+    height: 29px
+    width: 29px
+    display: inline-block
+    background:
+        image: url('../img/footer-instagram-icon.svg')
+
+    &:hover
+        background:
+            image: url('../img/footer-instagram-icon--color.svg')

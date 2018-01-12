@@ -1,0 +1,1 @@
+function registerPageLoadScript(){setTimeout(doNothing,3e3)}function doNothing(){}window.onload=function(){registerPageLoadScript()};
